@@ -17,8 +17,7 @@ node {
     stage('Results') {
         junit '**/target/surefire-reports/TEST-*.xml'
     }
-     stage('Build image') {         
-       
-            app = docker.build("maneesh/test") 
+	stage("Build Docker Image"){
+		sh "docker build - < Dockerfile"
             }
 }
