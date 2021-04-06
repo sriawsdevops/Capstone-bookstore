@@ -17,7 +17,7 @@ node {
     stage('Results') {
         junit '**/target/surefire-reports/TEST-*.xml'
     }
-	stage("Build Docker Image"){
-		sh "docker build - < Dockerfile"
-            }
+stage 'Build application Docker image'{
+    def appImg = docker.build("devops/petclinic")
+	}
 }
