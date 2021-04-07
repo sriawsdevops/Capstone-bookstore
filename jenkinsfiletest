@@ -21,7 +21,7 @@ node {
     def appImg = docker.build("447612103730.dkr.ecr.us-east-2.amazonaws.com/awsdevops")
     	}
 	stage ('Docker push'){
-  docker.withRegistry('https://447612103730.dkr.ecr.us-east-2.amazonaws.com', 'ecr:us-east-1:awscredential') {
+  docker.withRegistry('https://447612103730.dkr.ecr.us-east-2.amazonaws.com', 'ecr:us-east-2:awscredential') {
     docker.image('awsdevops').push('latest')
     }
     }
