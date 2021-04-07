@@ -19,6 +19,6 @@ node {
     }
     stage ('Build application Docker image'){
     def appImg = docker.build("447612103730.dkr.ecr.us-east-2.amazonaws.com/awsdevops")
-    app image.push
+    appImg.push()
 	}
 }
