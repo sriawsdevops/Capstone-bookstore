@@ -1,4 +1,4 @@
-FROM Tomact
+FROM tomact
 MAINTAINER saiteja
 WORKDIR /opt/java
 COPY ILP_Bookstore.war  /opt/tomcat/apache-tomcat-8.5.49/webapps
